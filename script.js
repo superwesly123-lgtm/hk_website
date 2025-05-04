@@ -20,6 +20,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle tab switching based on URL hash
+    function handleHashChange() {
+        // Check if we're on the projects page
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        if (tabBtns.length > 0) {
+            let tabId = window.location.hash;
+            
+            // If there's a hash in the URL and it corresponds to a tab
+            if (tabId && document.querySelector(tabId)) {
+                tabId = tabId.substring(1); // Remove the # symbol
+                
+                // Simulate a click on the corresponding tab button
+                const tabBtn = document.querySelector(`[data-tab="${tabId}"]`);
+                if (tabBtn) {
+                    tabBtn.click();
+                }
+            }
+        }
+    }
+
+    // Run once on page load
+    handleHashChange();
+    
+    // Listen for hash changes (when navigating with browser back/forward buttons)
+    window.addEventListener('hashchange', handleHashChange);
+
     // Project tabs functionality
     const tabBtns = document.querySelectorAll('.tab-btn');
     if (tabBtns.length > 0) {
@@ -39,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show the selected tab pane
                 const tabId = this.getAttribute('data-tab');
                 document.getElementById(tabId).classList.add('active');
+                
+                // Update URL hash without scrolling
+                const scrollPosition = window.scrollY;
+                window.location.hash = tabId;
+                window.scrollTo(0, scrollPosition);
             });
         });
     }
