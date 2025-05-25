@@ -1,5 +1,52 @@
 // Main JS file for website functionality
+
+// Language switching functionality
+let currentLanguage = 'zh'; // Default to Chinese
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
+    updatePageLanguage();
+    updateLanguageToggleButton();
+}
+
+function updatePageLanguage() {
+    // Hide all elements with current language class
+    const currentElements = document.querySelectorAll(`.${currentLanguage === 'zh' ? 'en' : 'zh'}`);
+    const targetElements = document.querySelectorAll(`.${currentLanguage}`);
+    
+    currentElements.forEach(element => {
+        element.style.display = 'none';
+    });
+    
+    targetElements.forEach(element => {
+        element.style.display = '';
+    });
+    
+    // Update page language attribute
+    document.documentElement.lang = currentLanguage === 'zh' ? 'zh-HK' : 'en';
+}
+
+function updateLanguageToggleButton() {
+    const toggleButton = document.getElementById('language-btn');
+    if (toggleButton) {
+        toggleButton.textContent = currentLanguage === 'zh' ? 'EN' : '中文';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Language toggle button event listener
+    const languageBtn = document.getElementById('language-btn');
+    if (languageBtn) {
+        languageBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleLanguage();
+        });
+    }
+    
+    // Initialize language display
+    updatePageLanguage();
+    updateLanguageToggleButton();
+
     // Mobile menu toggle (can be implemented if needed)
     
     // Smooth scrolling for anchor links
@@ -94,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const publications = document.querySelectorAll('.publication');
                 
                 publications.forEach(pub => {
-                    if (selectedYear === '全部') {
+                    if (selectedYear === '全部' || selectedYear === 'All') {
                         pub.style.display = 'block';
                     } else {
                         // Check if publication contains the selected year
