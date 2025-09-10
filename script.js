@@ -1,7 +1,7 @@
 // Main JS file for website functionality
 
 // Language switching functionality
-let currentLanguage = 'zh'; // Default to Chinese
+let currentLanguage = 'en'; // Default to Chinese
 
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'zh' ? 'en' : 'zh';
