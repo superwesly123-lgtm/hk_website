@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Robot Joey - 您的網站標題</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
+    <style>
+        .joey-section-1 {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+            border-left: 5px solid #0066cc;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+        }
+
+        .joey-section-2 {
+            background: white;
+            border: none;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .joey-section-2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #0066cc, #0052a3, #0066cc);
+        }
+
+        .joey-section-3 {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #0066cc;
+            border-radius: 15px;
+        }
+
+        .joey-section-4 {
+            background: white;
+            color: #333;
+            border: 2px solid #0066cc;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+        }
+
+        .joey-section-4 h3 {
+            color: #0066cc !important;
+        }
+
+        .joey-section-4 .feature-list li {
+            color: #333;
+        }
+
+        .joey-section-5 {
+            background: white;
+            border: 3px dashed #0066cc;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .joey-section-6 {
+            background: #f8f9fa;
+            border-left: 8px solid #0066cc;
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: #e3f2fd;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .highlight-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #0066cc;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../image/Logo3.png" alt="Logo" style="height: 60px;">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">主頁</a></li>
+                    <li><a href="../team.html">研究團隊</a></li>
+                    <li><a href="../projects.html">研究項目</a></li>
+                    <li><a href="../publications.html">出版物</a></li>
+                    <li><a href="../info.html">有用資訊</a></li>
+                    <li><a href="../contact.html">聯絡我們</a></li>
+                </ul>
+            </nav>
+            <div class="language-toggle">
+                <a href="#" id="language-btn">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="zh">Social Robot Joey</h1>
+            <h1 class="en" style="display: none;">Social Robot Joey</h1>
+        </div>
+    </section>
+
+    <section class="program-detail">
+        <div class="container">
+            <div class="program-hero">
+                <div class="program-hero-image">
+                    <img src="../image/Joey.PNG" alt="Social Robot Joey">
+                </div>
+                <div class="program-hero-content">
+                    <h2 class="zh">Social Robot Joey</h2>
+                    <h2 class="en" style="display: none;">Social Robot Joey</h2>
+                    <p class="zh"><!-- 請添加中文描述 --></p>
+                    <p class="en" style="display: none;">The AI-driven social robot Joey, developed by Prof YEUNG,
+                        enhances children's English language development through interactive storytelling learning
+                        activities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="program-content">
+                <!-- Section 1: Background -->
+                <div class="content-section joey-section-1">
+                    <h3 class="zh" style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 2rem;">📚</span> 背景
+                    </h3>
+                    <h3 class="en" style="display: none; align-items: center; gap: 10px;">
+                        <span style="font-size: 2rem;">📚</span> Background
+                    </h3>
+                    <ul class="feature-list">
+                        <li class="zh">首個專為學校環境中的幼兒設計的社交機器人，用於提供故事講述活動</li>
+                        <li class="en" style="display: none;">First social robot designed to deliver storytelling
+                            activities for young children in school settings</li>
+
+                        <li class="zh">建立在社交機器人、教育心理學和語言學習的前沿知識之上</li>
+                        <li class="en" style="display: none;">Built on cutting-edge knowledge from social robotics,
+                            educational psychology, and language learning</li>
+
+                        <li class="zh" style="margin-left: 30px; font-size: 0.95em;">
+                            <strong style="color: #0066cc;">社交機器人：</strong>提供學習陪伴，支持兒童成長
+                        </li>
+                        <li class="en" style="display: none; margin-left: 30px; font-size: 0.95em;">
+                            <strong style="color: #0066cc;">Social Robotics:</strong> Provides learning companionship to
+                            support children's growth
+                        </li>
+
+                        <li class="zh" style="margin-left: 30px; font-size: 0.95em;">
+                            <strong style="color: #0066cc;">教育心理學：</strong>創造社交夥伴關係以促進學習
+                        </li>
+                        <li class="en" style="display: none; margin-left: 30px; font-size: 0.95em;">
+                            <strong style="color: #0066cc;">Educational Psychology:</strong> Creates social partnership
+                            to facilitate learning
+                        </li>
+
+                        <li class="zh" style="margin-left: 30px; font-size: 0.95em;">
+                            <strong style="color: #0066cc;">語言學習：</strong>使用故事講述作為關鍵策略，增強溝通技能和知識傳遞
+                        </li>
+                        <li class="en" style="display: none; margin-left: 30px; font-size: 0.95em;">
+                            <strong style="color: #0066cc;">Language Learning:</strong> Uses storytelling as a key
+                            strategy to enhance communication skills and knowledge transfer
+                        </li>
+
+                        <li class="zh">促進幼兒的英語語言學習體驗</li>
+                        <li class="en" style="display: none;">Promote English language learning experience in young
+                            children</li>
+                    </ul>
+                </div>
+
+                <!-- Section 2: Features -->
+                <div class="content-section joey-section-2">
+                    <h3 class="zh" style="color: #0066cc; text-align: center; margin-bottom: 30px;">教育工具「Joey」特色</h3>
+                    <h3 class="en" style="display: none; color: #0066cc; text-align: center; margin-bottom: 30px;">
+                        Educational Tool 'Joey' Features</h3>
+                    <ul class="feature-list" style="background: #f8f9fa; padding: 25px; border-radius: 10px;">
+                        <li class="zh">使用故事講述和復述方法的自動化鷹架語言學習策略</li>
+                        <li class="en" style="display: none;">Automated Scaffolded Language Learning Strategy using
+                            storytelling and retelling methods</li>
+                        <li class="zh">真實溝通：同步面部表情和手臂動作，實現真實的社交互動</li>
+                        <li class="en" style="display: none;">Authentic Communication: synchronizes facial expressions
+                            and arm gestures for genuine social interaction</li>
+                        <li class="zh">AI 驅動的後端系統：生成定制化學習內容，包括故事音頻、插圖和理解問題</li>
+                        <li class="en" style="display: none;">AI-powered Backend System: generates customized learning
+                            content with story audio, illustrations and comprehension questions</li>
+                        <li class="zh">智能反饋系統：捕捉語言和手勢反應，提供鷹架式協助和反饋</li>
+                        <li class="en" style="display: none;">Smart Feedback System: Captures verbal and gestural
+                            responses for scaffolded assistance and feedback</li>
+                    </ul>
+                </div>
+
+                <!-- Section 4: Research Impact Stats -->
+                <div class="content-section joey-section-4">
+                    <h3 class="zh" style="text-align: center; margin-bottom: 30px; font-size: 2rem;">研究影響</h3>
+                    <h3 class="en" style="display: none; text-align: center; margin-bottom: 30px; font-size: 2rem;">
+                        Research Impact</h3>
+                    <ul class="feature-list"
+                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <li class="zh stat-card">
+                            <span class="stat-icon">👥</span>
+                            超過 2,000 名年輕英語學習者與 Joey 互動
+                        </li>
+                        <li class="en" style="display: none;" class="stat-card">
+                            <span class="stat-icon">👥</span>
+                            2,000+ Young English Learners Engaged with Joey
+                        </li>
+                        <li class="zh stat-card">
+                            <span class="stat-icon">🏫</span>
+                            40 所學校受惠，包括 16 所小學和 24 所幼稚園
+                        </li>
+                        <li class="en" style="display: none;" class="stat-card">
+                            <span class="stat-icon">🏫</span>
+                            40 Schools Benefited with 16 Primary Schools and 24 Kindergartens
+                        </li>
+                        <li class="zh stat-card">
+                            <span class="stat-icon">👨‍🏫</span>
+                            超過 200 名幼稚園及小學教師接受培訓
+                        </li>
+                        <li class="en" style="display: none;" class="stat-card">
+                            <span class="stat-icon">👨‍🏫</span>
+                            200+ Teachers Trained in Kindergartens & Primary Schools
+                        </li>
+                        <li class="zh stat-card">
+                            <span class="stat-icon">📅</span>
+                            此項目正在進行中，預計於 2026 年 8 月完成。
+                        </li>
+                        <li class="en" style="display: none;" class="stat-card">
+                            <span class="stat-icon">📅</span>
+                            The project is ongoing and will be completed in August 2026.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 5: Effectiveness -->
+                <div class="content-section joey-section-5">
+                    <div style="position: absolute; top: -15px; left: 30px; background: white; padding: 0 15px;">
+                        <span style="font-size: 1.5rem; color: #0066cc;">⭐</span>
+                    </div>
+                    <h3 class="zh" style="color: #0066cc; margin-bottom: 20px;">教育工具「Joey」的有效性</h3>
+                    <h3 class="en" style="display: none; color: #0066cc; margin-bottom: 20px;">Effectiveness of the
+                        Educational Tool 'Joey'</h3>
+                    <p class="zh" style="font-weight: 600; color: #0052a3; margin-bottom: 20px;">研究證據（Yeung et al.,
+                        2025）顯示：</p>
+                    <p class="en" style="display: none; font-weight: 600; color: #0052a3; margin-bottom: 20px;">Research
+                        evidence (Yeung et al., 2025) showed:</p>
+                    <ul class="feature-list">
+                        <li class="zh"
+                            style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <strong style="color: #0066cc;">社交機器人改善</strong>兒童的故事理解和參與度，相比使用平板電腦。
+                        </li>
+                        <li class="en"
+                            style="display: none; background: #e3f2fd; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <strong style="color: #0066cc;">Social robot improved</strong> children's story
+                            comprehension and engagement compared to using tablets.
+                        </li>
+                        <li class="zh"
+                            style="background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <strong style="color: #0066cc;">社交機器人優於</strong>人類和平板電腦，能夠持續維持兒童的注意力。
+                        </li>
+                        <li class="en"
+                            style="display: none; background: #e8f5e9; padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                            <strong style="color: #0066cc;">Social robot outperforms</strong> humans and tablets in
+                            sustaining children's attention over time.
+                        </li>
+                        <li class="zh" style="background: #fff3e0; padding: 15px; border-radius: 8px;">
+                            <strong style="color: #0066cc;">Joey，一個類人機器人</strong>，比機械外觀的機器人更能提升理解力和注意力。
+                        </li>
+                        <li class="en" style="display: none; background: #fff3e0; padding: 15px; border-radius: 8px;">
+                            <strong style="color: #0066cc;">Joey, a human-like robot</strong>, enhances comprehension
+                            and attention better than machine-looking robots.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 6: Publications -->
+                <div class="content-section joey-section-6">
+                    <h3 class="zh"
+                        style="color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 15px; display: inline-block;">
+                        📄 出版物</h3>
+                    <h3 class="en"
+                        style="display: none; color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 15px; display: inline-block;">
+                        📄 Publications</h3>
+                    <ul class="feature-list" style="margin-top: 25px;">
+                        <li class="zh highlight-item">
+                            Yeung, S. S., Ma, M., & Law, T. S.-T. (2025). Let's listen and tell a story together: social
+                            robot and multidimensional learning engagement among young learners. AI, Brain and Child,
+                            1(5),
+                            <a href="https://doi.org/10.1007/s44436-025-00006-z" target="_blank"
+                                style="color: #0066cc; text-decoration: underline;">https://doi.org/10.1007/s44436-025-00006-z</a>
+                        </li>
+                        <li class="en" style="display: none;" class="highlight-item">
+                            Yeung, S. S., Ma, M., & Law, T. S.-T. (2025). Let's listen and tell a story together: social
+                            robot and multidimensional learning engagement among young learners. AI, Brain and Child,
+                            1(5),
+                            <a href="https://doi.org/10.1007/s44436-025-00006-z" target="_blank"
+                                style="color: #0066cc; text-decoration: underline;">https://doi.org/10.1007/s44436-025-00006-z</a>
+                        </li>
+                        <li class="zh highlight-item">
+                            Ma, M., Law, T. S. T., & Yeung, S. S. (2025). The Impact of Storytelling Social Robots on
+                            Young ESL Learners' Engagement, Motivation, and Perception [Poster presentation]. 2025
+                            American Educational Research Association, Denver, Colorado, United States of America.
+                        </li>
+                        <li class="en" style="display: none;" class="highlight-item">
+                            Ma, M., Law, T. S. T., & Yeung, S. S. (2025). The Impact of Storytelling Social Robots on
+                            Young ESL Learners' Engagement, Motivation, and Perception [Poster presentation]. 2025
+                            American Educational Research Association, Denver, Colorado, United States of America.
+                        </li>
+                        <li class="zh highlight-item">
+                            Law, T. S. T., Wang, Z., & Yeung, S. S. S. (2025). Let Robots Tell Stories: Using Social
+                            Robots as Storytellers to Promote Language Learning among Young Children. [Manuscript
+                            submitted for publication]. Department of Psychology, the Education University of Hong Kong
+                        </li>
+                        <li class="en" style="display: none;" class="highlight-item">
+                            Law, T. S. T., Wang, Z., & Yeung, S. S. S. (2025). Let Robots Tell Stories: Using Social
+                            Robots as Storytellers to Promote Language Learning among Young Children. [Manuscript
+                            submitted for publication]. Department of Psychology, the Education University of Hong Kong
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="back-button">
+                    <a href="../info.html" class="btn-back">
+                        <span class="zh">返回有用資訊</span>
+                        <span class="en" style="display: none;">Back to Useful Information</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>© 2025 Enhancing Children's Language Learning through Training and Technology 版權所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
