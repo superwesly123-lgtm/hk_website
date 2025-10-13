@@ -1184,3 +1184,313 @@ footer {
         font-size: 1.3rem;
     }
 } 
+/* Plat
+form Features Layout Styles */
+.platform-features-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.features-text {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.features-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.competencies-list {
+    list-style: none;
+    counter-reset: competency-counter;
+    padding: 0;
+}
+
+.competencies-list li {
+    counter-increment: competency-counter;
+    position: relative;
+    padding: 15px 20px 15px 60px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    color: #333;
+    transition: all 0.3s ease;
+    border-left: 4px solid #0066cc;
+}
+
+.competencies-list li:before {
+    content: counter(competency-counter);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+}
+
+.competencies-list li:hover {
+    transform: translateX(5px);
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.features-image {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-image-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.features-image-stack img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-image-stack img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Content Styles */
+.background-content h4 {
+    font-size: 1.2rem;
+    color: #0066cc;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.background-content h4:first-child {
+    margin-top: 0;
+}
+
+.background-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Responsive design for Platform Features */
+@media (max-width: 992px) {
+    .platform-features-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .features-image {
+        order: -1;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-text {
+        padding: 20px;
+    }
+    
+    .competencies-list li {
+        padding: 12px 15px 12px 55px;
+        font-size: 1rem;
+    }
+    
+    .competencies-list li:before {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+        left: 12px;
+    }
+    
+    .features-image {
+        padding: 15px;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .competencies-list li {
+        padding: 10px 12px 10px 50px;
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    
+    .competencies-list li:before {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+        left: 10px;
+    }
+}
+
+/* Research Impact Layout Styles */
+.research-impact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.impact-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.impact-content h4 {
+    font-size: 1.3rem;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+.impact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.impact-list li {
+    position: relative;
+    padding: 15px 20px 15px 40px;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.7;
+    transition: all 0.3s ease;
+    border-left: 4px solid #0066cc;
+}
+
+.impact-list li:before {
+    content: "•";
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #0066cc;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.impact-list li:hover {
+    transform: translateX(5px);
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.impact-list li strong {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.impact-list li em {
+    color: #666;
+    font-style: italic;
+}
+
+.impact-list li:last-child {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    border-left-color: #f9a825;
+}
+
+.impact-list li:last-child:before {
+    color: #f9a825;
+}
+
+.impact-image {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+}
+
+.impact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive design for Research Impact */
+@media (max-width: 992px) {
+    .research-impact-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .impact-image {
+        order: -1;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-content {
+        padding: 20px;
+    }
+    
+    .impact-list li {
+        padding: 12px 15px 12px 35px;
+        font-size: 1rem;
+    }
+    
+    .impact-list li:before {
+        left: 12px;
+        top: 12px;
+        font-size: 1.3rem;
+    }
+    
+    .impact-image {
+        padding: 15px;
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .impact-list li {
+        padding: 10px 12px 10px 30px;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+    
+    .impact-list li:before {
+        left: 10px;
+        top: 10px;
+        font-size: 1.2rem;
+    }
+}
