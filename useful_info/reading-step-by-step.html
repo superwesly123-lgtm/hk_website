@@ -7,6 +7,61 @@
     <title>Reading Step by Step - 您的網站標題</title>
     <link rel="stylesheet" href="../styles.css">
     <script src="../script.js" defer></script>
+    <style>
+        .joey-section-1 {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f8f9fa 100%);
+            border-left: 5px solid #0066cc;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.1);
+        }
+
+        .joey-section-2 {
+            background: white;
+            border: none;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .joey-section-2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #0066cc, #0052a3, #0066cc);
+        }
+
+        .joey-section-3 {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid #0066cc;
+            border-radius: 15px;
+        }
+
+        .joey-section-4 {
+            background: white;
+            color: #333;
+            border: 2px solid #0066cc;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
+        }
+
+        .joey-section-6 {
+            background: #f8f9fa;
+            border-left: 8px solid #0066cc;
+            box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #0066cc;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,9 +110,13 @@
             </div>
 
             <div class="program-content">
-                <div class="content-section">
-                    <h3 class="zh">Background</h3>
-                    <h3 class="en" style="display: none;">Background</h3>
+                <div class="content-section joey-section-1">
+                    <h3 class="zh" style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 2rem;">📚</span> Background
+                    </h3>
+                    <h3 class="en" style="display: none; align-items: center; gap: 10px;">
+                        <span style="font-size: 2rem;">📚</span> Background
+                    </h3>
                     <ul class="feature-list">
                         <li class="zh">Reading Step-by-Step: Affix
                             平台是基於當前閱讀科學開發的，該科學強調形態意識（MA）是英語讀寫能力的關鍵——尤其對於英語作為第二語言（ESL）的學習者。</li>
@@ -71,9 +130,9 @@
                     </ul>
                 </div>
 
-                <div class="content-section">
-                    <h3 class="zh">平台特色</h3>
-                    <h3 class="en" style="display: none;">Platform Features</h3>
+                <div class="content-section joey-section-2">
+                    <h3 class="zh" style="color: #0066cc; text-align: center; margin-bottom: 30px;">平台特色</h3>
+                    <h3 class="en" style="display: none; color: #0066cc; text-align: center; margin-bottom: 30px;">Platform Features</h3>
                     <div style="display: flex; gap: 20px; align-items: flex-start;">
                         <div style="flex: 1;">
                             <ul class="feature-list">
@@ -101,9 +160,9 @@
                     </div>
                 </div>
 
-                <div class="content-section">
-                    <h3 class="zh">教育影響</h3>
-                    <h3 class="en" style="display: none;">Educational Impact</h3>
+                <div class="content-section joey-section-4">
+                    <h3 class="zh" style="color: #0066cc; text-align: center; margin-bottom: 30px; font-size: 2rem;">教育影響</h3>
+                    <h3 class="en" style="display: none; color: #0066cc; text-align: center; margin-bottom: 30px; font-size: 2rem;">Educational Impact</h3>
 
                     <div style="background: #f8f9fa; padding: 30px; border-radius: 10px; margin-bottom: 30px;">
                         <div
@@ -162,9 +221,13 @@
                         Education and Research).</p>
                 </div>
 
-                <div class="content-section">
-                    <h3 class="zh">研究影響</h3>
-                    <h3 class="en" style="display: none;">Research Impact</h3>
+                <div class="content-section joey-section-6">
+                    <h3 class="zh" style="color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 15px; display: inline-block;">
+                        📄 研究影響
+                    </h3>
+                    <h3 class="en" style="display: none; color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 15px; display: inline-block;">
+                        📄 Research Impact
+                    </h3>
                     <ul class="feature-list" style="list-style-type: disc; padding-left: 20px;">
                         <li style="margin-bottom: 15px;">
                             Yeung, S. S. S., Qiao, S., Law, T. S. T., & Savage, R. (2025). Examining the effectiveness
